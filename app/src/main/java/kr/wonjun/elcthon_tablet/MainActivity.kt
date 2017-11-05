@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private val card = "0 0 FF 0 FF 0 0 0 FF C F4 D5 4B 1 1 0 4 8 4 C9 AE 58 E5 1A 0 "
+    private val card = "0 0 FF 0 FF 0 0 0 FF C F4 D5 4B 1 1 0 4 8 4 C9 AE 58 E5 1A 0 1"
     private var bt: BluetoothSPP? = null
     private var isComeIn = false
     private var isTimerStared = false
@@ -59,27 +59,30 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         temperature.setOnClickListener {
-            drawer_layout.openDrawer(GravityCompat.START)
-            temperatureLayout.visibility = View.VISIBLE
-            callLayout.visibility = View.GONE
+            //            drawer_layout.openDrawer(GravityCompat.START)
+//            temperatureLayout.visibility = View.VISIBLE
+//            callLayout.visibility = View.GONE
         }
 
 
         bt?.setOnDataReceivedListener(BluetoothSPP.OnDataReceivedListener { data, message ->
             Log.e("asdf123", message)
             if (!isComeIn) {
-                if (card.equals(message)) {
+                if (card == message) {
                     isComeIn = true
+                    startCount()
                 }
             } else {
-                if (message.equals("sex")) {
 
-                }
             }
         })
         exit.setOnClickListener {
-            bt?.send("5", false)
-            Log.e("send", "send")
+            if (isComeIn) {
+                bt?.send("@", false)
+                Log.e("send", "send")
+                isComeIn = false
+                reset()
+            }
         }
 
         btn1.setOnClickListener(this)
@@ -95,7 +98,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn11.setOnClickListener(this)
         btn12.setOnClickListener(this)
         btn13.setOnClickListener(this)
-        startCount()
     }
 
     private fun startCount() {
@@ -137,7 +139,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun reset() {
-
+        limitTime.text = "00:00:00"
+        registrationTime.text = "0000-00-00 00:00 오전"
+        price.text = "₩"
+        countTimer.cancel()
     }
 
     override fun onClick(v: View?) {
