@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/temperatureLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="70dp"
+                android:src="@drawable/tempature"
+                android:tint="#fff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp"
+                android:layout_marginTop="70dp"
+                android:fontFamily="@font/nanum_square_bold"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="50sp"
+                tools:text="00000000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="1"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="2"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="3"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="4"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="5"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="6"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="7"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="8"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="9"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/btn10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="*"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="0"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+
+                    <Button
+                        android:id="@+id/btn12"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/nanum_square_light"
+                        android:text="#"
+                        android:textColor="#ffffff"
+                        android:textSize="75sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/btn13"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="18dp"
+                        android:src="@drawable/phone_w" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

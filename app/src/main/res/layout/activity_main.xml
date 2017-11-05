@@ -189,6 +189,7 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/registrationTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="19dp"
@@ -218,26 +219,28 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btnAddTime"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/btn_bg_blue"
-                    android:fontFamily="@font/nanum_square_bold"
-                    android:text="시간 추가"
-                    android:textColor="#ffffff"
-                    android:textSize="16sp" />
+                <!--<Button-->
+                <!--android:id="@+id/btnAddTime"-->
+                <!--android:layout_width="300dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:background="@drawable/btn_bg_blue"-->
+                <!--android:fontFamily="@font/nanum_square_bold"-->
+                <!--android:text="시간 추가"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="16sp" />-->
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:layout_marginBottom="26dp"
-                    android:background="@drawable/shadow" />
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="5dp"-->
+                <!--android:layout_marginBottom="26dp"-->
+                <!--android:background="@drawable/shadow" />-->
 
                 <Button
+                    android:id="@+id/exit"
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:background="@drawable/btn_bg_tp"
